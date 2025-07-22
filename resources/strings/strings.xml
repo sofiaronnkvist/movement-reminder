@@ -1,3 +1,7 @@
 <strings>
 <string id="AppName">Move Reminder</string>
+<string id="ReminderIntervalPrompt">Reminder Interval (min)</string>
+<string id="MovementDurationPrompt">Movement Duration to Clear (min)</string>
+<string id="StartHourPrompt">Active Window Start</string>
+<string id="EndHourPrompt">Active Window End</string>
 </strings>

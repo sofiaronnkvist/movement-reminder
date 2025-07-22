@@ -6,6 +6,8 @@ import Toybox.System;
 import Toybox.Timer;
 import Toybox.Lang;
 import Toybox.Activity;
+import Toybox.Attention;
+import Toybox.Background;
 
 class MovementReminderApp extends Application.AppBase {
 
@@ -25,12 +27,12 @@ class MovementReminderApp extends Application.AppBase {
     }
 
     function onStart(state) {
-        // Start the background timer for reminders
-        _startReminderTimer();
+        // Start a timer to check for reminders and update the display
+        _startDisplayTimer();
     }
 
     function onStop(state) {
-        // Stop the timer when widget is disabled
+        // Stop the timer when app is closed
         if (_timer != null) {
             _timer.stop();
             _timer = null;
@@ -43,19 +45,19 @@ class MovementReminderApp extends Application.AppBase {
     }
     
     function _loadSettings() {
-        var reminderMin = getProperty("reminderInterval");
-        if (reminderMin == null) { reminderMin = 30; }
+        var reminderMin = Application.Properties.getValue("reminderInterval");
+        if (reminderMin == null) { reminderMin = 2; }
         _reminderInterval = reminderMin.toNumber() * 60;
         
-        var movementMin = getProperty("movementDuration");
+        var movementMin = Application.Properties.getValue("movementDuration");
         if (movementMin == null) { movementMin = 3; }
         _movementDuration = movementMin.toNumber() * 60;
 
-        var startStr = getProperty("startHour");
+        var startStr = Application.Properties.getValue("startHour");
         if (startStr == null) { startStr = "07:00"; }
         
-        var endStr = getProperty("endHour");
-        if (endStr == null) { endStr = "22:00"; }
+        var endStr = Application.Properties.getValue("endHour");
+        if (endStr == null) { endStr = "23:59"; }
         _startSecs = _parseHMS(startStr);
         _endSecs = _parseHMS(endStr);
     }
@@ -70,11 +72,23 @@ class MovementReminderApp extends Application.AppBase {
         return (hourStr.toNumber() * 3600) + (minStr.toNumber() * 60);
     }
     
-    function _startReminderTimer() {
-        // Check every minute for production
-        _timer = new Timer.Timer();
-        var callback = new Lang.Method(self, :_checkForReminder);
-        _timer.start(callback, 60000, true);
+    function _startDisplayTimer() {
+        // Update display and check for reminders more frequently when app is active
+        if (_timer == null) {
+            _timer = new Timer.Timer();
+            var callback = new Lang.Method(self, :_updateAndCheck);
+            _timer.start(callback, 5000, true); // Every 5 seconds, repeat
+        }
+    }
+    
+    function _updateAndCheck() {
+        // Check for reminders
+        _checkForReminder();
+        
+        // Request a display update to refresh the countdown
+        if (_view != null) {
+            WatchUi.requestUpdate();
+        }
     }
     
     function _checkForReminder() {
@@ -112,18 +126,34 @@ class MovementReminderApp extends Application.AppBase {
     function _triggerReminder() {
         _lastReminderTs = Time.now().value();
         
-        // Vibrate to get attention
-        if (System has :vibrate) {
-            System.vibrate([1000, 200, 1000]);
+        // Use Attention API for vibration and tones
+        if (Attention has :vibrate) {
+            var vibeData = [
+                new Attention.VibeProfile(50, 1000),  // 50% intensity for 1000ms
+                new Attention.VibeProfile(0, 200),    // Pause for 200ms
+                new Attention.VibeProfile(75, 1000)   // 75% intensity for 1000ms
+            ];
+            Attention.vibrate(vibeData);
         }
         
-        // Show visual reminder on widget
+        // Play tone if available
+        if (Attention has :playTone) {
+            Attention.playTone(Attention.TONE_ALARM);
+        }
+        
+        // Show notification if available
+        if (Attention has :showNotification) {
+            Attention.showNotification({
+                :notificationText => "Time to move!",
+                :backgroundColor => Graphics.COLOR_RED
+            });
+        }
+        
+        // Update the view if it exists (when app is open)
         if (_view != null) {
             _view.triggerReminder();
+            WatchUi.requestUpdate();
         }
-        
-        // Request widget update to show reminder
-        WatchUi.requestUpdate();
     }
     
     function dismissReminderManually() {
