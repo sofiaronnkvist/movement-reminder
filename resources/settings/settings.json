@@ -28,13 +28,13 @@
       "id": "startHour",
       "type": "time",
       "label": "Active Window Start",
-      "defaultValue": "07:00"
+      "defaultValue": "08:00"
     },
     {
       "id": "endHour",
       "type": "time",
       "label": "Active Window End",
-      "defaultValue": "23:59"
+      "defaultValue": "21:00"
     }
   ]
 }

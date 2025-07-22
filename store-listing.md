@@ -1,18 +1,21 @@
 # Move Reminder Widget - Connect IQ Store Listing
 
 ## App Title
+
 Move Reminder
 
 ## Short Description (50 characters max)
+
 Widget that reminds you to move regularly
 
 ## Description (4000 characters max)
+
 Move Reminder is a convenient widget that helps you maintain an active lifestyle by providing gentle reminders to move throughout your day.
 
 **Key Features:**
 • Always-on widget - no need to launch an app
-• Customizable reminder intervals (10-120 minutes)
-• Configurable active hours (7:00 AM - 10:00 PM default)
+• Customizable reminder intervals (1-120 minutes)
+• Configurable active hours (8:00 AM - 9:00 PM default)
 • Vibration alerts when it's time to move
 • Clean, minimal widget display
 • Easy dismissal with select button
@@ -27,6 +30,7 @@ Move Reminder is a convenient widget that helps you maintain an active lifestyle
 • People who lose track of time when focused
 
 **How it works:**
+
 1. Add Move Reminder to your widget glances
 2. The widget runs automatically in the background
 3. Shows current time and "Move Reminder" status
@@ -42,8 +46,8 @@ Move Reminder is a convenient widget that helps you maintain an active lifestyle
 
 **Customization:**
 Configure all settings through Connect IQ mobile app:
-• Reminder interval: 10-120 minutes (default: 30)
-• Active hours: Set start/end times (default: 7 AM - 10 PM)
+• Reminder interval: 1-120 minutes (default: 2)
+• Active hours: Set start/end times (default: 8 AM - 9 PM)
 • Movement duration goals: 1-15 minutes (default: 3)
 
 **Benefits:**
@@ -56,13 +60,17 @@ Configure all settings through Connect IQ mobile app:
 Stay active, stay healthy with Move Reminder widget!
 
 ## Keywords (comma-separated)
+
 health, fitness, reminder, movement, activity, wellness, productivity, exercise, sitting, break
 
 ## Categories
+
 Health &amp; Fitness
 
 ## Privacy Policy
+
 This app does not collect, store, or transmit any personal data. All functionality operates locally on your device.
 
 ## Support Contact
+
 [Your email address here]

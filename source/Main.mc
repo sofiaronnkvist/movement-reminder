@@ -54,10 +54,10 @@ class MovementReminderApp extends Application.AppBase {
         _movementDuration = movementMin.toNumber() * 60;
 
         var startStr = Application.Properties.getValue("startHour");
-        if (startStr == null) { startStr = "07:00"; }
+        if (startStr == null) { startStr = "08:00"; }
         
         var endStr = Application.Properties.getValue("endHour");
-        if (endStr == null) { endStr = "23:59"; }
+        if (endStr == null) { endStr = "21:00"; }
         _startSecs = _parseHMS(startStr);
         _endSecs = _parseHMS(endStr);
     }

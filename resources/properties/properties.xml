@@ -1,6 +1,6 @@
 <properties>
     <property id="reminderInterval" type="number">2</property>
     <property id="movementDuration" type="number">3</property>
-    <property id="startHour" type="string">07:00</property>
-    <property id="endHour" type="string">23:59</property>
+    <property id="startHour" type="string">08:00</property>
+    <property id="endHour" type="string">21:00</property>
 </properties>

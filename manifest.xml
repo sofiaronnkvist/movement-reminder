@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
-    <iq:application id="caf7f953-1e80-472c-825f-9d6dfbd5127f" type="" name="@Strings.AppName" entry="MovementReminderApp" launcherIcon="@Drawables.LauncherIcon">
-        <iq:products/>
+    <iq:application id="f2e8d4a1-9c7b-4f3a-8e2d-1a5b9c4f7e8a" type="widget" name="@Strings.AppName" entry="MovementReminderApp" launcherIcon="@Drawables.LauncherIcon">
+        <iq:products>
+            <iq:product id="fr245m"/>
+        </iq:products>
         <iq:permissions>
             <iq:uses-permission id="Background"/>
         </iq:permissions>
