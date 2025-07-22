@@ -1,21 +1,15 @@
-<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq"
-             version="3">
-  <iq:application id="1e409bd422824fa8a50e79e47ca86b21"
-                  type="widget"
-                  name="@Strings.AppName"
-                  entry="MovementReminderApp"
-                  launcherIcon="@Drawables.LauncherIcon">
-
-    <iq:products>
-      <iq:product id="fr245m"/>
-    </iq:products>
-
-    <iq:permissions>
-      <iq:uses-permission id="Sensor"/>
-    </iq:permissions>
-
-    <iq:languages>
+<?xml version="1.0"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
+    <iq:application id="5c4b441f-980d-4a1a-9f63-df99480a080d" type="widget" name="@Strings.AppName" entry="MovementReminderApp" launcherIcon="@Drawables.LauncherIcon">
+        <iq:products>
+            <iq:product id="fr245m"/>
+        </iq:products>
+        <iq:permissions>
+            <iq:uses-permission id="Sensor"/>
+        </iq:permissions>
+        <iq:languages>
             <iq:language>eng</iq:language>
-      </iq:languages>
-  </iq:application>
+        </iq:languages>
+        <iq:barrels/>
+    </iq:application>
 </iq:manifest>
