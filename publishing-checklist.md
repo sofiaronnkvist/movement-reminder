@@ -20,7 +20,7 @@
 - [ ] Store icon (if different from launcher icon)
 
 ### 3. Store Listing Information
-- [ ] App title: "MovementReminder"
+- [ ] App title: "Move Reminder"
 - [ ] Short description (50 chars): "Widget that reminds you to move regularly"
 - [ ] Full description (see updated store-listing.md)
 - [ ] Keywords: health, fitness, reminder, movement, activity, widget, wellness

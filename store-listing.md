@@ -1,13 +1,13 @@
-# MovementReminder Widget - Connect IQ Store Listing
+# Move Reminder Widget - Connect IQ Store Listing
 
 ## App Title
-MovementReminder
+Move Reminder
 
 ## Short Description (50 characters max)
 Widget that reminds you to move regularly
 
 ## Description (4000 characters max)
-MovementReminder is a convenient widget that helps you maintain an active lifestyle by providing gentle reminders to move throughout your day.
+Move Reminder is a convenient widget that helps you maintain an active lifestyle by providing gentle reminders to move throughout your day.
 
 **Key Features:**
 • Always-on widget - no need to launch an app
@@ -27,7 +27,7 @@ MovementReminder is a convenient widget that helps you maintain an active lifest
 • People who lose track of time when focused
 
 **How it works:**
-1. Add MovementReminder to your widget glances
+1. Add Move Reminder to your widget glances
 2. The widget runs automatically in the background
 3. Shows current time and "Move Reminder" status
 4. After your set interval, displays "TIME TO MOVE!" in red
@@ -53,7 +53,7 @@ Configure all settings through Connect IQ mobile app:
 • Supports healthy work-life balance
 • Easy to use and configure
 
-Stay active, stay healthy with MovementReminder widget!
+Stay active, stay healthy with Move Reminder widget!
 
 ## Keywords (comma-separated)
 health, fitness, reminder, movement, activity, wellness, productivity, exercise, sitting, break

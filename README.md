@@ -1,11 +1,11 @@
 
-# MovementReminder Widget
+# Move Reminder Widget
 
 A Garmin Connect IQ widget that helps you stay active by providing gentle reminders to move throughout your day.
 
 ## Overview
 
-MovementReminder is a **widget** (not an app) that runs continuously in the background, monitoring inactivity and providing timely movement reminders. Perfect for desk workers, students, and anyone looking to maintain a more active lifestyle.
+Move Reminder is a **widget** (not an app) that runs continuously in the background, monitoring inactivity and providing timely movement reminders. Perfect for desk workers, students, and anyone looking to maintain a more active lifestyle.
 
 ## Features
 
