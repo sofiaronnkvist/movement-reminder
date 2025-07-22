@@ -1,0 +1,6 @@
+
+# Build artifacts
+bin/
+*.ipr
+*.iml
+.idea/

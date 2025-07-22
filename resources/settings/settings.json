@@ -1,0 +1,40 @@
+{
+  "settings": [
+    {
+      "id": "reminderInterval",
+      "type": "number",
+      "label": "Reminder Interval (min)",
+      "description": "How many minutes of inactivity trigger a reminder",
+      "defaultValue": 30,
+      "range": [
+        10,
+        120
+      ],
+      "step": 1
+    },
+    {
+      "id": "movementDuration",
+      "type": "number",
+      "label": "Movement Duration to Clear (min)",
+      "description": "How long you must move to clear the alert",
+      "defaultValue": 3,
+      "range": [
+        1,
+        15
+      ],
+      "step": 1
+    },
+    {
+      "id": "startHour",
+      "type": "time",
+      "label": "Active Window Start",
+      "defaultValue": "07:00"
+    },
+    {
+      "id": "endHour",
+      "type": "time",
+      "label": "Active Window End",
+      "defaultValue": "22:00"
+    }
+  ]
+}

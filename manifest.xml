@@ -1,0 +1,36 @@
+
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq"
+             version="3.2.0">
+  <iq:application id="com.example.movementreminder"
+                  type="watch-app"
+                  name="Movement Reminder">
+    <iq:permissions>
+      <iq:uses-permission id="System"/>
+      <iq:uses-permission id="Activity"/>
+    </iq:permissions>
+
+    <iq:products>
+      <iq:product id="forerunner245m"/>
+      <iq:product id="forerunner245"/>
+      <iq:product id="vivoactive4"/>
+      <iq:product id="venu"/>
+      <iq:product id="venu2"/>
+      <iq:product id="venu3"/>
+      <iq:product id="vivosport"/>
+      <iq:product id="forerunner255"/>
+      <iq:product id="forerunner265"/>
+      <iq:product id="forerunner945"/>
+      <iq:product id="forerunner955"/>
+      <iq:product id="forerunner965"/>
+      <iq:product id="fenix6"/>
+      <iq:product id="fenix7"/>
+      <iq:product id="epix2"/>
+      <iq:product id="marq2"/>
+      <iq:product id="enduro2"/>
+    </iq:products>
+
+    <iq:resources>
+      <iq:resource id="settings" type="settings" file="resources/settings/settings.json"/>
+    </iq:resources>
+  </iq:application>
+</iq:manifest>
