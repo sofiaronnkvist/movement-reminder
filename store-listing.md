@@ -1,43 +1,59 @@
-# MovementReminder - Connect IQ Store Listing
+# MovementReminder Widget - Connect IQ Store Listing
 
 ## App Title
 MovementReminder
 
 ## Short Description (50 characters max)
-Stay active with gentle movement reminders
+Widget that reminds you to move regularly
 
 ## Description (4000 characters max)
-MovementReminder helps you stay active throughout the day by providing gentle reminders to move when you've been inactive for too long.
+MovementReminder is a convenient widget that helps you maintain an active lifestyle by providing gentle reminders to move throughout your day.
 
 **Key Features:**
-• Customizable reminder intervals (default: 30 minutes)
-• Configurable active hours (default: 7:00 AM - 10:00 PM)
-• Adjustable movement duration suggestions (default: 3 minutes)
-• Vibration alerts to get your attention
-• Simple, clean interface
-• Easy to dismiss reminders with select button
+• Always-on widget - no need to launch an app
+• Customizable reminder intervals (10-120 minutes)
+• Configurable active hours (7:00 AM - 10:00 PM default)
+• Vibration alerts when it's time to move
+• Clean, minimal widget display
+• Easy dismissal with select button
+• Automatic dismissal after movement
+• Battery-efficient background operation
 
 **Perfect for:**
-• Office workers who sit for long periods
-• Anyone looking to increase daily activity
-• Health-conscious individuals
-• People recovering from injury who need movement reminders
+• Desk workers and remote employees
+• Students studying for long periods
+• Anyone looking to increase daily movement
+• Health-conscious individuals building better habits
+• People who lose track of time when focused
 
 **How it works:**
-1. Install and launch the app
-2. The app monitors your inactivity
-3. After your set interval of inactivity, you'll receive a vibration alert
-4. The screen shows "TIME TO MOVE!" with your configured movement duration
-5. Press the select button to dismiss the reminder
-6. Stay healthy by moving regularly!
+1. Add MovementReminder to your widget glances
+2. The widget runs automatically in the background
+3. Shows current time and "Move Reminder" status
+4. After your set interval, displays "TIME TO MOVE!" in red
+5. Press select button to dismiss, or it auto-dismisses after movement
+6. Timer resets and cycle continues throughout active hours
+
+**Widget Display:**
+• Normal state: Shows "Move Reminder" with current time
+• Alert state: Red "TIME TO MOVE!" with movement instruction
+• Responsive layout adapts to different screen sizes
+• Minimal, non-intrusive design
 
 **Customization:**
-All settings can be configured through the Connect IQ mobile app:
-• Reminder interval (in minutes)
-• Active hours (start and end time)
-• Movement duration (in minutes)
+Configure all settings through Connect IQ mobile app:
+• Reminder interval: 10-120 minutes (default: 30)
+• Active hours: Set start/end times (default: 7 AM - 10 PM)
+• Movement duration goals: 1-15 minutes (default: 3)
 
-Stay healthy, stay active, stay moving with MovementReminder!
+**Benefits:**
+• Runs continuously without user intervention
+• Helps break up long periods of inactivity
+• Encourages regular movement breaks
+• Supports healthy work-life balance
+• Easy to use and configure
+
+Stay active, stay healthy with MovementReminder widget!
 
 ## Keywords (comma-separated)
 health, fitness, reminder, movement, activity, wellness, productivity, exercise, sitting, break

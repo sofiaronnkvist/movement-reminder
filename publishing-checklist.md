@@ -1,10 +1,10 @@
 # Connect IQ Store Publishing Checklist
 
 ## ✅ Files Ready
-- [x] MovementReminder.prg (compiled app)
-- [x] manifest.xml
+- [x] MovementReminder.prg (compiled widget)
+- [x] manifest.xml (configured as widget)
 - [x] launcher_icon.png (1024x1024)
-- [x] store-listing.md (marketing copy)
+- [x] store-listing.md (updated marketing copy)
 
 ## 📋 Required for Submission
 
@@ -14,23 +14,23 @@
 - [ ] Accept developer agreements
 
 ### 2. App Assets
-- [x] App binary (.prg file) ✓
+- [x] Widget binary (.prg file) ✓
 - [x] App icon (1024x1024 PNG) ✓
 - [ ] Screenshots (recommended: 2-5 screenshots)
 - [ ] Store icon (if different from launcher icon)
 
 ### 3. Store Listing Information
 - [ ] App title: "MovementReminder"
-- [ ] Short description (50 chars): "Stay active with gentle movement reminders"
-- [ ] Full description (see store-listing.md)
-- [ ] Keywords: health, fitness, reminder, movement, activity
+- [ ] Short description (50 chars): "Widget that reminds you to move regularly"
+- [ ] Full description (see updated store-listing.md)
+- [ ] Keywords: health, fitness, reminder, movement, activity, widget, wellness
 - [ ] Category: Health & Fitness
 - [ ] Privacy policy (provided in store-listing.md)
 - [ ] Support email address
 
 ### 4. App Configuration
 - [ ] Target devices: Forerunner 245m (and compatible devices)
-- [ ] App type: Watch App
+- [ ] App type: Widget
 - [ ] Pricing: Free
 - [ ] Languages: English
 
