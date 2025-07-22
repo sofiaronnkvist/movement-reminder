@@ -2,20 +2,15 @@
 #!/usr/bin/env bash
 set -e
 
-DEVICE="${1:-fenix6}"
-ACTION="${2:-build}"
+# Simple build script for Movement Reminder Connect IQ app
+# Usage: ./build.sh
 
-BIN_DIR="bin"
-PRG_NAME="MovementReminder.prg"
+echo "Building Movement Reminder for Forerunner 245 Music..."
+monkeyc -f monkey.jungle -o MovementReminder.prg -y ../developer_key
 
-mkdir -p "$BIN_DIR"
-
-echo "Building for $DEVICE..."
-monkeyc -m manifest.xml -o "$BIN_DIR/$PRG_NAME" -d "$DEVICE" --release
-
-echo "Build complete: $BIN_DIR/$PRG_NAME"
-
-if [ "$ACTION" = "install" ]; then
-  echo "Installing to device/simulator..."
-  connectiq --install "$BIN_DIR/$PRG_NAME"
+if [ $? -eq 0 ]; then
+    echo "✅ Build successful! MovementReminder.prg created."
+else
+    echo "❌ Build failed!"
+    exit 1
 fi

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
-    <iq:application id="5c4b441f-980d-4a1a-9f63-df99480a080d" type="app" name="@Strings.AppName" entry="MovementReminderApp" launcherIcon="@Drawables.LauncherIcon">
+    <iq:application id="a1b2c3d4-e5f6-7890-abcd-ef1234567890" type="app" name="@Strings.AppName" entry="MovementReminderApp" launcherIcon="@Drawables.LauncherIcon">
         <iq:products>
             <iq:product id="fr245m"/>
         </iq:products>
