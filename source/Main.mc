@@ -2,7 +2,7 @@
 import Toybox.Application;
 import Toybox.WatchUi;
 
-class MainApp extends Application.AppBase {
+class Main extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -17,6 +17,7 @@ class MainApp extends Application.AppBase {
     }
 
     function getInitialView() {
-        return [ new MovementReminderView() ];
+        var view = new MovementReminderView();
+        return [ view, new MovementReminderDelegate(view) ];
     }
 }

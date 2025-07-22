@@ -1,6 +1,32 @@
 
-# Build artifacts
+# Connect IQ Build Files
+*.prg.debug.xml
 bin/
+gen/
+internal-mir/
+external-mir/
+
+# Developer Key (keep this private!)
+../developer_key
+
+# IDE Files
+.vscode/
+.idea/
+*.sublime-*
 *.ipr
 *.iml
-.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+*~
+
+# Build artifacts - include .prg for distribution
+# (commenting out *.prg so we can include the compiled app)

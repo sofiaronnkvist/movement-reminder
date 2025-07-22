@@ -1,0 +1,6 @@
+project.manifest = manifest.xml
+
+output = MovementReminder.prg
+sourcePath = source
+resourcePath = resources
+product = fr245m
