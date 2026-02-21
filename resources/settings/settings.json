@@ -5,9 +5,9 @@
       "type": "number",
       "label": "Reminder Interval (min)",
       "description": "How many minutes of inactivity trigger a reminder",
-      "defaultValue": 2,
+      "defaultValue": 30,
       "range": [
-        1,
+        10,
         120
       ],
       "step": 1
@@ -28,13 +28,13 @@
       "id": "startHour",
       "type": "time",
       "label": "Active Window Start",
-      "defaultValue": "08:00"
+      "defaultValue": "07:00"
     },
     {
       "id": "endHour",
       "type": "time",
       "label": "Active Window End",
-      "defaultValue": "21:00"
+      "defaultValue": "22:00"
     }
   ]
 }

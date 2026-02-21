@@ -36,19 +36,26 @@ class MovementReminderView extends WatchUi.View {
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
             dc.drawText(centerX, centerY + 5, Graphics.FONT_TINY, "Press SELECT to dismiss", Graphics.TEXT_JUSTIFY_CENTER);
         } else {
-            // Normal app display with countdown
+            // Normal app display: title, current time, then countdown
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(centerX, centerY - 40, Graphics.FONT_MEDIUM, "Movement Reminder", Graphics.TEXT_JUSTIFY_CENTER);
-            
-            // Calculate and display countdown
+            dc.drawText(centerX, centerY - 55, Graphics.FONT_MEDIUM, "Move Reminder", Graphics.TEXT_JUSTIFY_CENTER);
+
+            // Current time (HH:MM)
+            var now = Time.now();
+            var info = Time.Gregorian.info(now, Time.FORMAT_SHORT);
+            var currentTime = Lang.format("$1$:$2$", [info.hour.format("%02d"), info.min.format("%02d")]);
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(centerX, centerY - 20, Graphics.FONT_NUMBER_MILD, currentTime, Graphics.TEXT_JUSTIFY_CENTER);
+
+            // Countdown below
             var countdownText = _getCountdownText();
             if (countdownText != null) {
                 dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(centerX, centerY - 5, Graphics.FONT_SMALL, "Next reminder in:", Graphics.TEXT_JUSTIFY_CENTER);
-                dc.drawText(centerX, centerY + 20, Graphics.FONT_LARGE, countdownText, Graphics.TEXT_JUSTIFY_CENTER);
+                dc.drawText(centerX, centerY + 25, Graphics.FONT_TINY, "Next reminder in:", Graphics.TEXT_JUSTIFY_CENTER);
+                dc.drawText(centerX, centerY + 43, Graphics.FONT_SMALL, countdownText, Graphics.TEXT_JUSTIFY_CENTER);
             } else {
                 dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-                dc.drawText(centerX, centerY + 5, Graphics.FONT_SMALL, "Outside active hours", Graphics.TEXT_JUSTIFY_CENTER);
+                dc.drawText(centerX, centerY + 30, Graphics.FONT_TINY, "Outside active hours", Graphics.TEXT_JUSTIFY_CENTER);
             }
         }
     }
@@ -62,13 +69,13 @@ class MovementReminderView extends WatchUi.View {
         
         // Load settings
         var reminderMin = Application.Properties.getValue("reminderInterval");
-        if (reminderMin == null) { reminderMin = 2; }
+        if (reminderMin == null) { reminderMin = 30; }
         var reminderInterval = reminderMin.toNumber() * 60; // Convert to seconds
-        
+
         var startStr = Application.Properties.getValue("startHour");
-        if (startStr == null) { startStr = "08:00"; }
+        if (startStr == null) { startStr = "07:00"; }
         var endStr = Application.Properties.getValue("endHour");
-        if (endStr == null) { endStr = "21:00"; }
+        if (endStr == null) { endStr = "22:00"; }
         
         var startSecs = _parseHMS(startStr);
         var endSecs = _parseHMS(endStr);
